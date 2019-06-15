@@ -1,3 +1,7 @@
 # Editor Specific Files
 .idea/
 .vs/
+
+# Package Managers
+vendor/
+node_modules/
