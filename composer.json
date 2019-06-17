@@ -2,7 +2,8 @@
     "require": {
         "symfony/http-foundation": "^4.3",
         "symfony/routing": "^4.3",
-        "twig/twig": "^2.0"
+        "twig/twig": "^2.0",
+        "ext-json": "*"
     },
     "autoload": {
         "files": [

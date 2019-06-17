@@ -1,0 +1,18 @@
+{% extends  "layouts/base.html.twig " %}
+
+{% block title %}Intial Setup{% endblock %}
+
+{% block content %}
+    <div class="container center">
+        <div class="row">
+            <div class="col text-center">
+                <h3>De laatste stap</h3>
+                <p>Op moment worden de zojuist opgegeven gegevens verwerkt in de installatie</p>
+                <div class="my-4">
+                    <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                </div>
+                <button type="button" class="btn btn-secondary" disabled>Bezig...</button>
+            </div>
+        </div>
+    </div>
+{% endblock %}
