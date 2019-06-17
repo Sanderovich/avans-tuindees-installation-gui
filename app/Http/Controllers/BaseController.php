@@ -72,7 +72,19 @@ class BaseController
 
         // Update .env
         changeEnv($this->installDirectory, [
-            'KEY' => 'NEW_VALUE',
+            'APP_NAME' => $_SESSION['information']['name'],
+            'APP_URL' => $_SESSION['information']['url'],
+            'DB_DATABASE' => $_SESSION['information']['db_name'],
+            'DB_USERNAME' => $_SESSION['information']['db_user'],
+            'DB_PASSWORD' => $_SESSION['information']['db_user_password'],
+            'MAIL_DRIVER' => 'smtp',
+            'MAIL_HOST' => $_SESSION['information']['email_host'],
+            'MAIL_PORT' => $_SESSION['information']['email_port'],
+            'MAIL_USERNAME' => $_SESSION['information']['email_user'],
+            'MAIL_PASSWORD' => $_SESSION['information']['email_user_password'],
+            'MAIL_FROM_ADDRESS' => $_SESSION['information']['email_from_address'],
+            'MAIL_FROM_NAME' => $_SESSION['information']['email_from_name'],
+            'MAIL_ENCRYPTION' => $_SESSION['information']['email_encryption'],
         ]);
 
         return json_encode([
@@ -83,8 +95,11 @@ class BaseController
 
     public function setupInformation()
     {
-        var_dump($_POST);
-        return "";
+        session_start();
+
+        $_SESSION['information'] = $_POST;
+
+        return view('information-setup.html.twig');
     }
 
     public function done()

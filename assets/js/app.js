@@ -1,1 +1,4 @@
-import 'bootstrap/dist/js/bootstrap.min';
+import 'jquery';
+import 'popper.js';
+import 'bootstrap';
+import './custom';
