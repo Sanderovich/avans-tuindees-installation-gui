@@ -70,7 +70,10 @@ class BaseController
         // Copy .env
         copy($this->installDirectory . '/.env.exampmle', $this->installDirectory . '/.env');
 
-        // TODO: Fill .env
+        // Update .env
+        changeEnv($this->installDirectory, [
+            'KEY' => 'NEW_VALUE',
+        ]);
 
         return json_encode([
             'status' => 'OK',
