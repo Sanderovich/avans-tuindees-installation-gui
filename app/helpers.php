@@ -40,3 +40,25 @@ if (!function_exists("assets")) {
 
     }
 }
+
+if (!function_exists('runCommand')) {
+
+    /**
+     * Run a command, optionally in a given working directory.
+     *
+     * @param string $command The command to run.
+     * @param string $cwd The working directory.
+     */
+    function runCommand(string $command, string $cwd = ''): void
+    {
+        $run = '';
+
+        if ($cwd !== '') {
+            $run = "cd ${cwd} && ";
+        }
+
+        $run .= $command;
+
+        exec($run);
+    }
+}

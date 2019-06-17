@@ -5,3 +5,6 @@
 # Package Managers
 vendor/
 node_modules/
+
+# My test
+test/
