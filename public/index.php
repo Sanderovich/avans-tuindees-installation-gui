@@ -48,8 +48,6 @@ $routes->add('done', $done);
 $context = new RequestContext();
 $context->fromRequest(Request::createFromGlobals());
 
-var_dump($context);
-
 $matcher = new UrlMatcher($routes, $context);
 $data = $matcher->match($context->getPathInfo());
 

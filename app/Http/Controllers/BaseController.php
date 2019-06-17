@@ -37,9 +37,9 @@ class BaseController
         ]);
     }
 
-    public function setupInformation(RequestContext $request)
+    public function setupInformation()
     {
-        var_dump($request);
+        var_dump($_POST);
         return "";
     }
 
