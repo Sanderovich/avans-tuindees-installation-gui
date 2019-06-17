@@ -49,7 +49,9 @@ class BaseController
         ];
 
         foreach ($directories as $directory) {
-            mkdir($this->installDirectory . '/' . $directory, 0777, true);
+            if (!is_dir($this->installDirectory . '/' . $directory)) {
+                mkdir($this->installDirectory . '/' . $directory, 0777, true);
+            }
         }
 
         return json_encode([
