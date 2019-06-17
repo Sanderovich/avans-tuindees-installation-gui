@@ -1,9 +1,9 @@
 {
     "require": {
+        "ext-json": "*",
         "symfony/http-foundation": "^4.3",
         "symfony/routing": "^4.3",
-        "twig/twig": "^2.0",
-        "ext-json": "*"
+        "twig/twig": "^2.0"
     },
     "autoload": {
         "files": [
